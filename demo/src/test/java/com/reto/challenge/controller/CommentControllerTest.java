@@ -36,24 +36,69 @@ class CommentControllerTest {
                     Assertions.assertNotEquals(null, body);
                 });
     }
-
     @Test
-    void feedCombine() {
+    void feedCombinetest() {
+        webTestClient.get()
+                .uri("/comment/feedCombine")
+                .exchange()
+                .expectStatus()
+                .isOk()
+                .expectBody()
+                .consumeWith(article->{
+                    byte[] body = article.getResponseBody();
+                    Assertions.assertNotEquals(null, body);
+                });
     }
-
     @Test
-    void feedZip() {
+    void margeZipTest() {
+        webTestClient.get()
+                .uri("/comment/margeZip")
+                .exchange()
+                .expectStatus()
+                .isOk()
+                .expectBody()
+                .consumeWith(article->{
+                    byte[] body = article.getResponseBody();
+                    Assertions.assertNotEquals(null, body);
+                });
     }
-
     @Test
-    void feedZipWith() {
+    void margeZipWithTest() {
+        webTestClient.get()
+                .uri("/comment/margeZipWith")
+                .exchange()
+                .expectStatus()
+                .isOk()
+                .expectBody()
+                .consumeWith(article->{
+                    byte[] body = article.getResponseBody();
+                    Assertions.assertNotEquals(null, body);
+                });
     }
-
     @Test
-    void feedConcatWith() {
+    void mergeConcatWithTest() {
+        webTestClient.get()
+                .uri("/comment/mergeConcatWith")
+                .exchange()
+                .expectStatus()
+                .isOk()
+                .expectBody()
+                .consumeWith(article->{
+                    byte[] body = article.getResponseBody();
+                    Assertions.assertNotEquals(null, body);
+                });
     }
-
     @Test
-    void feedEchToIterable() {
+    void forEchToIterableTest() {
+        webTestClient.get()
+                .uri("/comment/forEchToIterable")
+                .exchange()
+                .expectStatus()
+                .isOk()
+                .expectBody()
+                .consumeWith(article->{
+                    byte[] body = article.getResponseBody();
+                    Assertions.assertNotEquals(null, body);
+                });
     }
 }
